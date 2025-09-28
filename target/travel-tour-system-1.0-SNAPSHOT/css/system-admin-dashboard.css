@@ -1,0 +1,56 @@
+/* admin-dashboard.css */
+
+/* General page styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 20px 0 10px 20px;
+    color: #2f3640;
+}
+
+h3 {
+    margin: 20px 0 10px 20px;
+    color: #40739e;
+}
+
+/* Quick actions container */
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 20px 20px 20px;
+}
+
+/* Individual quick action card */
+.quick-action {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.quick-action h3 a {
+    text-decoration: none;
+    color: #40739e;
+}
+
+.quick-action p {
+    font-size: 14px;
+    color: #718093;
+    margin-top: 10px;
+}
+
+/* Hover effect for quick action cards */
+.quick-action:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}

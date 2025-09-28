@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- Display Name -->
+    <display-name>Tour Package Booking System</display-name>
+
+    <!-- Welcome File List -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Session Configuration -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- Servlet Mappings -->
+    <!-- Authentication Servlets -->
+    <servlet>
+        <servlet-name>TourLoginServlet</servlet-name>
+        <servlet-class>com.travel.controller.auth.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourLoginServlet</servlet-name>
+        <url-pattern>/tour-login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourLogoutServlet</servlet-name>
+        <servlet-class>com.travel.controller.auth.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourLogoutServlet</servlet-name>
+        <url-pattern>/tour-logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourRegisterServlet</servlet-name>
+        <servlet-class>com.travel.controller.auth.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourRegisterServlet</servlet-name>
+        <url-pattern>/tour-register</url-pattern>
+    </servlet-mapping>
+
+    <!-- Customer Servlets -->
+    <servlet>
+        <servlet-name>TourCustomerDashboardServlet</servlet-name>
+        <servlet-class>com.travel.controller.customer.CustomerDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourCustomerDashboardServlet</servlet-name>
+        <url-pattern>/tour-customer-dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourProfileServlet</servlet-name>
+        <servlet-class>com.travel.controller.customer.ProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourProfileServlet</servlet-name>
+        <url-pattern>/tour-customer-profile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PackageServlet</servlet-name>
+        <servlet-class>com.travel.controller.customer.PackageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PackageServlet</servlet-name>
+        <url-pattern>/tour-customer-packages/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BookingServlet</servlet-name>
+        <servlet-class>com.travel.controller.customer.BookingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookingServlet</servlet-name>
+        <url-pattern>/customer/bookings/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PaymentServlet</servlet-name>
+        <servlet-class>com.travel.controller.customer.PaymentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaymentServlet</servlet-name>
+        <url-pattern>/customer/payments/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Customer Feedback Servlet -->
+    <servlet>
+        <servlet-name>TourFeedbackServlet</servlet-name>
+        <servlet-class>com.travel.controller.customer.FeedbackServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourFeedbackServlet</servlet-name>
+        <url-pattern>/tour-customer-support/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Customer Report Issue Servlet -->
+    <servlet>
+        <servlet-name>TourReportIssueServlet</servlet-name>
+        <servlet-class>com.travel.controller.customer.ReportIssueServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourReportIssueServlet</servlet-name>
+        <url-pattern>/tour-customer-report-issue</url-pattern>
+    </servlet-mapping>
+
+    <!-- Package Manager Servlets -->
+    <servlet>
+        <servlet-name>TourPackageManagerDashboardServlet</servlet-name>
+        <servlet-class>com.travel.controller.managers.PackageManagerDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourPackageManagerDashboardServlet</servlet-name>
+        <url-pattern>/tour-package-manager-dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourPackageManagementServlet</servlet-name>
+        <servlet-class>com.travel.controller.managers.PackageManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourPackageManagementServlet</servlet-name>
+        <url-pattern>/tour-package-manager-packages</url-pattern>
+    </servlet-mapping>
+
+    <!-- Booking Manager Servlets -->
+    <servlet>
+        <servlet-name>TourBookingManagerDashboardServlet</servlet-name>
+        <servlet-class>com.travel.controller.managers.BookingManagerDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourBookingManagerDashboardServlet</servlet-name>
+        <url-pattern>/tour-booking-manager-dashboard</url-pattern>
+    </servlet-mapping>
+
+    <!-- Payment Manager Servlets -->
+    <servlet>
+        <servlet-name>TourPaymentManagerDashboardServlet</servlet-name>
+        <servlet-class>com.travel.controller.managers.PaymentManagerDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourPaymentManagerDashboardServlet</servlet-name>
+        <url-pattern>/tour-payment-manager-dashboard</url-pattern>
+    </servlet-mapping>
+
+    <!-- Support Officer Servlets -->
+    <servlet>
+        <servlet-name>TourSupportDashboardServlet</servlet-name>
+        <servlet-class>com.travel.controller.managers.SupportDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourSupportDashboardServlet</servlet-name>
+        <url-pattern>/tour-support-dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourSupportManagementServlet</servlet-name>
+        <servlet-class>com.travel.controller.managers.SupportManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourSupportManagementServlet</servlet-name>
+        <url-pattern>/tour-support-officer-panel</url-pattern>
+    </servlet-mapping>
+
+    <!-- System Admin Servlets -->
+    <servlet>
+        <servlet-name>TourSystemAdminDashboardServlet</servlet-name>
+        <servlet-class>com.travel.controller.admin.SystemAdminDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourSystemAdminDashboardServlet</servlet-name>
+        <url-pattern>/tour-system-admin-dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourSystemOverviewServlet</servlet-name>
+        <servlet-class>com.travel.controller.admin.SystemOverviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourSystemOverviewServlet</servlet-name>
+        <url-pattern>/tour-system-admin-overview</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourUserManagementServlet</servlet-name>
+        <servlet-class>com.travel.controller.admin.UserManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourUserManagementServlet</servlet-name>
+        <url-pattern>/tour-system-admin-users</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourSystemConfigurationServlet</servlet-name>
+        <servlet-class>com.travel.controller.admin.SystemConfigurationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourSystemConfigurationServlet</servlet-name>
+        <url-pattern>/tour-system-admin-configuration</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/css/*</url-pattern>
+    </servlet-mapping>
+    <mime-mapping>
+        <extension>css</extension>
+        <mime-type>text/css</mime-type>
+    </mime-mapping>
+</web-app>

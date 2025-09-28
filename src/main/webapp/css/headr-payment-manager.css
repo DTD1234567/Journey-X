@@ -1,0 +1,84 @@
+/* ===== Payment Manager Portal Styling ===== */
+
+/* Header */
+header {
+    background: #1e2a38;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+nav {
+    background: #243447;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #3498db;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background: #1e2a38;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Active Link */
+nav ul li a.active {
+    background: #3498db;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Content Area */
+.content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}

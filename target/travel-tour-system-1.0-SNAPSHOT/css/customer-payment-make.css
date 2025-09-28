@@ -1,0 +1,98 @@
+/* ====== General Layout ====== */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ====== Tables ====== */
+table {
+    width: 60%;
+    margin: 15px 0;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 8px;
+    vertical-align: top;
+}
+
+table th {
+    padding: 8px;
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+/* ====== Inputs ====== */
+input[type="text"],
+input[type="number"],
+input[type="month"],
+select {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+/* Amount field is read-only style */
+input[readonly] {
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+/* ====== Buttons ====== */
+input[type="submit"],
+input[type="reset"] {
+    padding: 8px 16px;
+    margin: 5px 2px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #ddd;
+}
+
+/* ====== Messages ====== */
+.error {
+    color: #c00;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: #080;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ====== Card Fields ====== */
+.card-field td {
+    padding-top: 8px;
+}
+
+/* ====== Links ====== */
+p a {
+    margin-right: 10px;
+}
+
+/* ====== Optional: Responsive tables ====== */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+}
